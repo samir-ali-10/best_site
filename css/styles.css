@@ -3,9 +3,12 @@
 :root {
     --primary-color: #33211d;
     --secondary-color: #da8d5b;
+    --font-weight: 700;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
 }
@@ -18,3 +21,107 @@ body {
     width: 70%;
     margin: auto;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/************************Start Page Heading ************************/
+
+.page_heading_image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.page_heading {
+    position: relative;
+    color: white;
+    height: 100vh;
+}
+
+.page_heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #30180cd4;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.page_heading .containing {
+    width: 90%;
+    margin: auto;
+}
+
+.page_heading h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.page_heading nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page_heading nav ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.page_heading nav ul li a {
+    color: white;
+}
+
+.page_heading nav ul li a.active {
+    color: var(--secondary-color);
+}
+
+.page_heading .landing {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.page_heading .landing p {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: var(--font-weight);
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.page_heading .landing h2 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: -45px;
+}
+
+.page_heading .landing div {
+    font-size: 2rem;
+    font-weight: var(--font-weight);
+    margin-top: -40px;
+}
+
+.overlay_bottom {
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+}
+
+/************************End Page Heading ************************/
