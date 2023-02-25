@@ -2,7 +2,9 @@
 
 :root {
     --primary-color: #33211d;
-    --secondary-color: #da8d5b;
+    --secondary-color: #da9f5b;
+    --shaded-color: #a0a0a0;
+    --background-color: #fffbf2;
     --font-weight: 700;
 }
 
@@ -15,10 +17,11 @@
 
 body {
     margin: 0;
+    height: 50000px;
 }
 
 .container {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -34,7 +37,7 @@ a {
 
 .page_heading_image {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -125,3 +128,177 @@ a {
 }
 
 /************************End Page Heading ************************/
+/************************Start About ************************/
+
+.about {
+    background-color: var(--background-color);
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    top: calc(0px + 70px);
+}
+
+.special_heading h3 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.special_heading h2 {
+    margin-top: 0;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.about .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .info>div {
+    width: calc(100% / 3);
+}
+
+.about .info .image img {
+    width: 100%;
+}
+
+.about .info .story {
+    text-align: left;
+}
+
+.about .info .story h2,
+.about .info .vision h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+.about .info .story p,
+.about .info .vision div {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.about .info .story div {
+    color: var(--shaded-color);
+    line-height: 1.6;
+}
+
+.about .info .story button,
+.about .info .vision button {
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 3px 20px;
+    font-size: 1.3rem;
+    margin-top: 25px;
+}
+
+.about .info .vision {
+    text-align: left;
+}
+
+.about .info .vision div {
+    color: var(--shaded-color);
+}
+
+.about .info .vision p {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.about .info .vision p i {
+    margin-right: 10px;
+}
+
+.about .info .vision button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/************************End About ************************/
+/************************Start Services ************************/
+
+.services {
+    padding: 50px 0;
+    background-color: var(--background-color);
+    position: relative;
+    text-align: center;
+}
+
+.services::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    top: calc(0px + -28px);
+}
+
+.services .info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services .info > div {
+    width: calc(100% / 2);
+}
+
+.services .info .info_card {
+    display: flex;
+    padding: 30px;
+}
+
+.services .info .info_card img {
+    width: 230px;
+    margin-right: 25px;
+}
+
+.services .info .info_card .content {
+    text-align: left;
+}
+
+.services .info .info_card .content h2 {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+}
+
+.services .info .info_card .content h2 i {
+    margin-right: 10px;
+    background-color: var(--secondary-color);
+}
+
+.services .info .info_card .content p {
+    color: var(--shaded-color);
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.overlay_top {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+}
+
+/************************End Services ************************/
