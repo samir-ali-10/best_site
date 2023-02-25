@@ -33,6 +33,12 @@ a {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
 /************************Start Page Heading ************************/
 
 .page_heading_image {
@@ -56,7 +62,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #30180cd4;
     opacity: 0.5;
     z-index: -2;
@@ -143,7 +149,7 @@ a {
     width: 3px;
     height: 100px;
     background-color: var(--secondary-color);
-    top: calc(0px + 70px);
+    top: calc(0px + 50px);
 }
 
 .special_heading h3 {
@@ -209,6 +215,7 @@ a {
     outline: none;
     padding: 3px 20px;
     font-size: 1.3rem;
+    cursor: pointer;
     margin-top: 25px;
 }
 
@@ -252,7 +259,7 @@ a {
     width: 3px;
     height: 100px;
     background-color: var(--secondary-color);
-    top: calc(0px + -28px);
+    top: calc(0px + -50px);
 }
 
 .services .info {
@@ -260,7 +267,7 @@ a {
     flex-wrap: wrap;
 }
 
-.services .info > div {
+.services .info>div {
     width: calc(100% / 2);
 }
 
@@ -302,3 +309,85 @@ a {
 }
 
 /************************End Services ************************/
+/************************Start Special Offer ************************/
+
+.special_offer {
+    padding: 150px 0;
+    position: relative;
+    text-align: center;
+}
+
+.special_offer .bg_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.special_offer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #30180cd4;
+    z-index: -1;
+}
+
+.special_offer h1 {
+    color: var(--secondary-color);
+    font-size: 5rem;
+}
+
+.special_offer h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-top: -30px;
+}
+
+.special_offer p {
+    margin-top: -5px;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.special_offer .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.special_offer .contact input[type = "email"] {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    height: 65px;
+    border: none;
+    outline: none;
+}
+
+.special_offer .contact input[type = "email"]::placeholder {
+    color: var(--shaded-color);
+}
+
+.special_offer .contact input[type = "submit"] {
+    padding: 10px 20px;
+    height: 65px;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.overlay_bottom_offer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/************************End Special Offer ************************/
