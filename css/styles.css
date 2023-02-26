@@ -12,10 +12,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
 }
 
 body {
+    font-family: 'Cairo', sans-serif;
     margin: 0;
     height: 50000px;
 }
@@ -40,6 +40,17 @@ h3 {
 }
 
 /************************Start Page Heading ************************/
+.page_heading {
+    background: url('../img/carousel-1.jpg') center center;
+    position: relative;
+}
+
+.page_heading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #64646471
+}
 
 .page_heading_image {
     width: 100%;
@@ -71,6 +82,8 @@ h3 {
 .page_heading .containing {
     width: 90%;
     margin: auto;
+    z-index: 2;
+    position: relative;
 }
 
 .page_heading h1 {
@@ -360,7 +373,7 @@ h3 {
     align-items: center;
 }
 
-.special_offer .contact input[type = "email"] {
+.special_offer .contact input[type="email"] {
     padding: 10px 20px;
     font-size: 1.5rem;
     height: 65px;
@@ -368,11 +381,11 @@ h3 {
     outline: none;
 }
 
-.special_offer .contact input[type = "email"]::placeholder {
+.special_offer .contact input[type="email"]::placeholder {
     color: var(--shaded-color);
 }
 
-.special_offer .contact input[type = "submit"] {
+.special_offer .contact input[type="submit"] {
     padding: 10px 20px;
     height: 65px;
     border: none;
