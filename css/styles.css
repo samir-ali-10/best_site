@@ -508,3 +508,119 @@ h3 {
 
 
 /************************End Pricing ************************/
+/************************Start Reservation ************************/
+
+.reservation {
+    background-color: var(--background-color);
+}
+
+.reservation .container {
+    background-image: url(/img/bg.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+
+.reservation .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #30180cd4;
+    z-index: -2;
+}
+
+.reservation .container::after {
+    content: "";
+    position: absolute;
+    background-image: url(/img/overlay-bottom.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+}
+
+.reservation .info {
+    display: flex;
+    position: relative;
+}
+
+.reservation .info .content,
+.reservation .info .book_table {
+    width: 50%;
+    padding: 100px 30px 30px;
+}
+
+.reservation .info .content h1 {
+    color: var(--secondary-color);
+    font-size: 4rem;
+}
+
+.reservation .info .content h3 {
+    color: white;
+    font-size: 2rem;
+    margin-top: -25px;
+}
+
+.reservation .info .content div {
+    color: white;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.reservation .info .content p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.reservation .info .content p i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.reservation .info .book_table {
+    text-align: center;
+    position: relative;
+}
+
+.reservation .info .book_table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #301c10d4;
+    z-index: -1;
+}
+
+.reservation .info .book_table h2 {
+    color: white;
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
+.reservation .info .book_table form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation .info .book_table form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+.reservation .info .book_table form input[type="submit"] {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/************************End Reservation ************************/
