@@ -91,10 +91,28 @@ h3 {
 }
 
 .page_heading nav ul {
-    width: 40%;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+.menu {
+    display: none;
+    font-size: 1.6rem;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.menu:hover {
+    color: var(--secondary-color);
+}
+
+.page_heading nav ul li {
+    width: calc(100% / 6);
 }
 
 .page_heading nav ul li a {
@@ -194,10 +212,10 @@ h3 {
 }
 
 .about .info {
+    padding: 100px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 .about .info>div {
@@ -302,6 +320,7 @@ h3 {
 }
 
 .services .info {
+    padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -316,15 +335,22 @@ h3 {
     padding: 30px;
 }
 
-.services .info .info_card img {
-    width: 30%;
-    height: 180px;
-    margin-right: 25px;
+.services .info .info_card>div {
+    width: calc(90% / 2);
+}
+
+.services .info .info_card .image img {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .services .info .info_card .content {
-    width: 50%;
     text-align: left;
+    margin-left: 15px;
 }
 
 .services .info .info_card .content h2 {
@@ -768,11 +794,13 @@ h3 {
     position: relative;
     padding: 100px 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.contact_us .containing > div {
+.contact_us .containing>div {
     width: calc(80% / 4);
+    margin-bottom: 50px;
 }
 
 .contact_us .containing h2 {
@@ -829,11 +857,13 @@ h3 {
 
 .contact_us .containing .newsletter form {
     display: flex;
+    flex-wrap: wrap;
     border: none;
 }
 
 .contact_us .containing .newsletter form input {
     padding: 15px 10px;
+    max-width: 100%;
 }
 
 .contact_us .containing .newsletter form input::placeholder {
@@ -863,3 +893,106 @@ h3 {
 }
 
 /************************End Contact us ************************/
+/************************Start Media Queries ************************/
+
+@media (min-width: 801px) and (max-width: 1100px) {
+    .page_heading nav ul {
+        width: 300px;
+    }
+
+    .page_heading nav ul li {
+        width: calc(100% / 3);
+    }
+
+    .services .info .info_card {
+        display: block;
+    }
+
+    .contact_us .containing>div {
+        width: calc(80% / 2);
+    }
+}
+
+@media (max-width: 800px) {
+    .page_heading nav ul {
+        width: 200px;
+    }
+
+    .page_heading nav ul li {
+        width: calc(100% / 2);
+    }
+
+    .about .info>div {
+        width: calc(100% / 1);
+        margin-bottom: 30px;
+    }
+
+    .services .info>div {
+        width: calc(100% / 1);
+    }
+
+    .pricing .variety {
+        display: block;
+    }
+
+    .pricing .variety .hot,
+    .pricing .variety .cold {
+        width: 100%;
+    }
+
+    .pricing .variety .hot h2,
+    .pricing .variety .cold h2 {
+        color: var(--secondary-color);
+    }
+
+    .testimonials .clients .client {
+        width: calc(100% / 1);
+    }
+
+    .contact_us .containing>div {
+        width: calc(100% / 1);
+    }
+}
+
+@media (max-width: 550px) {
+    .page_heading nav ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+/******************************* Special Medias **************************/
+
+@media (max-width: 1100px) {
+    .about .info .image {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .reservation .info {
+        display: block;
+    }
+
+    .reservation .info .content,
+    .reservation .info .book_table {
+        width: 100%;
+    }
+}
+
+/************************End Media Queries ************************/
