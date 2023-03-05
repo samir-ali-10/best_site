@@ -64,10 +64,11 @@ h3 {
 .page_heading::before {
     content: "";
     position: absolute;
-    top: 0;
+    inset: 0;
+    /* top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     background-color: #6a4e40d4;
     opacity: 0.5;
 }
@@ -101,11 +102,11 @@ h3 {
 .menu {
     display: none;
     font-size: 1.6rem;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
 }
 
 .menu:hover {
@@ -409,10 +410,7 @@ h3 {
 .special_offer::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: #30180cd4;
     z-index: -1;
 }
@@ -577,10 +575,7 @@ h3 {
 .reservation .container::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: #30180cd4;
     z-index: -2;
 }
@@ -644,10 +639,7 @@ h3 {
 .reservation .info .book_table::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: #301c10d4;
     z-index: -1;
 }
@@ -735,17 +727,6 @@ h3 {
     margin-top: 30px;
 }
 
-.testimonials .dots .dot_active {
-    width: 40px;
-    height: 20px;
-    background-color: #372929;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
 .testimonials .dots .dot {
     width: 20px;
     height: 20px;
@@ -757,6 +738,17 @@ h3 {
     -o-border-radius: 50%;
     margin-left: 10px;
 }
+
+.testimonials .dots .dot.active {
+    width: 40px;
+    background-color: #372929;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
 
 /************************End Testimonials ************************/
 /************************Start Contact us ************************/
@@ -770,10 +762,7 @@ h3 {
 .contact_us::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: #30180cd4;
 }
 
@@ -968,6 +957,10 @@ h3 {
 @media (max-width: 900px) {
     :root {
         font-size: 14px;
+    }
+
+    .services .info .info_card>div {
+        width: initial;
     }
 }
 
