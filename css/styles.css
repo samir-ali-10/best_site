@@ -6,6 +6,7 @@
     --shaded-color: #a0a0a0;
     --background-color: #fffbf2;
     --font-weight: 700;
+    scroll-behavior: smooth;
 }
 
 *,
