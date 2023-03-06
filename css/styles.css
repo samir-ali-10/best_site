@@ -397,7 +397,7 @@ h3 {
 .special_offer::before {
     content: "";
     position: absolute;
-    background-image: url(/img/bg.jpg);
+    background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
