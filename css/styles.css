@@ -312,7 +312,7 @@ h3 {
 .services::after {
     content: "";
     position: absolute;
-    background-image: url(/img/overlay-top.png);
+    background-image: url(./img/overlay-top.png);
     background-repeat: no-repeat;
     background-size: cover;
     bottom: -45px;
@@ -566,7 +566,7 @@ h3 {
 }
 
 .reservation .container {
-    background-image: url(/img/bg.jpg);
+    background-image: url(./img/bg.jpg);
     position: relative;
     z-index: 1;
 }
@@ -583,7 +583,7 @@ h3 {
 .reservation .container::after {
     content: "";
     position: absolute;
-    background-image: url(/img/overlay-bottom.png);
+    background-image: url(./img/overlay-bottom.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -754,7 +754,7 @@ h3 {
 /************************Start Contact us ************************/
 
 .contact_us {
-    background-image: url(/img/bg.jpg);
+    background-image: url(./img/bg.jpg);
     background-size: cover;
     position: relative;
 }
@@ -769,7 +769,7 @@ h3 {
 .contact_us::after {
     content: "";
     position: absolute;
-    background-image: url(/img/overlay-top.png);
+    background-image: url(./img/overlay-top.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
